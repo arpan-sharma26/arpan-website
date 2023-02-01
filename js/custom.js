@@ -12,7 +12,6 @@
 
   /* HTML document is loaded. DOM is ready. 
   -------------------------------------------*/
-
 // API event  
 window.addEventListener("load", function () {
   const form = document.getElementById('my-form');
