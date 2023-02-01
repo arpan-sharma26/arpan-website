@@ -13,6 +13,29 @@
   /* HTML document is loaded. DOM is ready. 
   -------------------------------------------*/
 
+// API event  
+window.addEventListener("load", function () {
+  const form = document.getElementById('my-form');
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    document.getElementById('submit').disabled = true;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+      .then(() => {
+        alert("Thanks for connecting!");
+        document.getElementById('fullname').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('message').value = "";
+        document.getElementById('submit').disabled = false;
+      })
+  });
+});
+
+
   $(document).ready(function() {
 
 
