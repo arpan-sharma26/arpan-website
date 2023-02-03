@@ -440,7 +440,7 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 
 #experience .experience-img {
-  background: url('../images/experience-img.jpg') no-repeat;
+  background: url('../images/experience-img.jpg') repeat;
 }
 
 #experience .media-heading {
